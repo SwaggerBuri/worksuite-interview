@@ -13,7 +13,9 @@ describe("Test adding a new job opening", () => {
         cy.get('[placeholder="Job title"]').type(jobTitle);
         cy.get('.btn-default').contains('Create job opening').click();
         cy.url().should('contain', '/marketplace/job-openings/details');
-        cy.get('.action-bar-title').should('have.text', ' Very Important Person ');
+        cy.get('.action-bar-title').should('contain', jobTitle);
+        cy.get('.nav-back-text').click();
+        cy.get('[ng-if="column.config.getTextCellLink"]').first().should('contain', jobTitle);
     });
 
     it("Add a new job opening without filling job title", () => {
