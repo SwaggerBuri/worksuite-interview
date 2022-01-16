@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "triggerAllTests-chrome": "npx cypress run --browser chrome --headed"
+    "triggerAllTests-chrome": "npx cypress run --browser chrome --headed",
+    "triggerAllTests-dashboard": "npx cypress run --record --key 4ba2e897-83ea-4e88-9cd9-7347f978a127"
+
   },
   "author": "",
   "license": "ISC",
